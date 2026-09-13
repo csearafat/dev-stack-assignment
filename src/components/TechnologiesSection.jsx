@@ -24,7 +24,7 @@ export default function TechnologiesSection({
       {isLoading ? (
         <LoadingState />
       ) : (
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_320px]">
+        <div className="grid grid-cols-1 gap-6 xl:grid-cols-[1fr_320px]">
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
             {technologies.map((tech) => (
               <TechnologyCard

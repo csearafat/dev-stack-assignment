@@ -2,7 +2,7 @@ export default function YourStack({ stack, onRemove, onRemoveAll }) {
   const count = stack.length;
 
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:sticky lg:top-24">
+    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm xl:sticky xl:top-24">
       <h3 className="text-lg font-bold text-slate-900">Your Stack</h3>
       <p className="mt-1 text-sm text-slate-400">
         {count === 0 ? "No technologies selected yet." : `${count} Technology Selected`}
