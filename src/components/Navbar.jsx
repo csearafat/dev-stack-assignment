@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../assets/logo-devstack.png";
 
 const NAV_LINKS = ["Home", "Technologies", "Projects", "About", "Contact"];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    function handleKeyDown(event) {
+      if (event.key === "Escape") setIsMenuOpen(false);
+    }
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isMenuOpen]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 backdrop-blur">

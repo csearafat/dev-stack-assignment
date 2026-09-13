@@ -4,6 +4,16 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /*
   Single source of truth for the brand gradient (orange -> pink -> violet).
   Change these three stops here and the brand name, hero heading highlight,
