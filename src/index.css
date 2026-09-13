@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*
   Single source of truth for the brand gradient (orange -> pink -> violet).
   Change these three stops here and the brand name, hero heading highlight,
