@@ -1,16 +1,44 @@
-# React + Vite
+# Dev Stack — Build Your Ideal Development Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Dev Stack is a browser-based tool for developers who are choosing technologies for
+their next project. It lists frontend, backend, database, language, styling, and
+DevOps options side by side so you can compare them and assemble a personal stack
+before you write a single line of code.
 
-Currently, two official plugins are available:
+## Built with
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React** (Vite) for the component-driven UI
+- **Tailwind CSS v4** for styling, with a single shared gradient token that themes
+  the brand name, hero heading, and primary buttons
+- **React-Toastify** for add/remove/duplicate notifications
+- **JSON** as the technology data source, loaded at runtime with `fetch`
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Curated technology catalog** — fifteen technologies across seven categories
+   (Frontend, Backend, Database, Language, Styling, DevOps, Tools), each with a
+   rating, difficulty level, and badge, rendered from a local JSON file rather
+   than hardcoded data.
+2. **Live stack builder** — add technologies to "Your Stack" with one click,
+   remove individual items or clear everything at once, with duplicate-add
+   protection and toast feedback for every action.
+3. **Fully responsive layout** — a sticky navbar that collapses into a hamburger
+   menu on mobile, and a technology grid that reflows from one column on phones
+   to three on desktop.
 
-## Expanding the Oxlint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Project structure
+
+```
+src/
+  components/   Navbar, Hero, TechnologyCard, TechnologiesSection, YourStack, Footer
+  App.jsx        App state: fetches data, manages the stack, wires up toasts
+public/
+  data/technologies.json   Technology dataset
+```
